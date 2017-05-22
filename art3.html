@@ -1,0 +1,96 @@
+<html>
+
+<head>
+    <style>
+    body {
+        padding: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f5f5f5;
+    }
+    
+    div {
+        position: absolute;
+        border-radius: 100%;
+    }
+    
+    .c1,
+    .c2,
+    .c3,
+    .c4 {
+        border: 1px solid red;
+    }
+    
+    .c1 {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .c2 {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .c3 {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .c4 {
+        width: 50px;
+        height: 50px;
+        background: red;
+    }
+    
+    .o1,
+    .o2,
+    .o3 {
+        width: 10px;
+        height: 10px;
+        background: red;
+        animation-name: spin;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    
+    .o1 {
+        margin-left: -100px;
+        transform-origin: 105px;
+        animation-duration: 3s;
+    }
+    
+    .o2 {
+        margin-left: -75px;
+        transform-origin: 80px;
+        animation-duration: 4s;
+    }
+    
+    .o3 {
+        margin-left: -50px;
+        transform-origin: 55px;
+        animation-duration: 5s;
+    }
+    
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="c1"></div>
+    <div class="c2"></div>
+    <div class="c3"></div>
+    <div class="c4"></div>
+    <div class="o1"></div>
+    <div class="o2"></div>
+    <div class="o3"></div>
+</body>
+
+</html>
