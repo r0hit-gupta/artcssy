@@ -1,0 +1,281 @@
+<html>
+
+<head>
+    <style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f9f9f9;
+        padding: 50px;
+    }
+    
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 230px;
+        height: 230px;
+        background: linear-gradient(to bottom right, #212b4d, #141c33);
+        z-index: -1;
+        border-radius: 60px;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+    }
+    
+    .bird {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 150px;
+        border-radius: 40px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+        transform: rotate(-8deg);
+    }
+    
+    .gradient-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 40px;
+    }
+    
+    .gradient {
+        position: absolute;
+        width: 230px;
+        height: 230px;
+        left: -40px;
+        top: -20px;
+        transform: scale(1);
+        background: linear-gradient(to bottom right, #fedd7d, #f2ac73) no-repeat border-box, linear-gradient(to bottom right, #f7c177, #e8896b) no-repeat border-box, linear-gradient(to bottom right, #f7c177, #e8896b) no-repeat border-box, linear-gradient(to bottom right, #e98b6c, #e16e66) no-repeat border-box;
+        background-size: 100px 100px, 100px 100px;
+        background-position: 0px 0px, 0px 100px, 100px 0px, 100px 100px;
+        transform: rotate(45deg);
+    }
+    
+    .eyes {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: auto;
+        width: 100%;
+        padding: 0 15%;
+    }
+    
+    .eye {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        background: #000;
+        border-radius: 50%;
+    }
+    
+    .twinkle {
+        position: absolute;
+        background: #fff;
+        width: 11px;
+        height: 6px;
+        border-radius: 100%;
+        transform: rotate(-45deg);
+        margin: 4px 2px;
+        background: linear-gradient(to bottom, #fff 50%, #000 55%, transparent 100%);
+    }
+    
+    .nose {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background: linear-gradient(to top right, #fcde82 50%, #eed27b 0%, #f9dc81 100%);
+        border-radius: 3px;
+        transform: rotate(45deg);
+        margin-top: 20px;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    }
+    
+    .wings {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 125%;
+        height: 50px;
+        z-index: -1;
+    }
+    
+    .part {
+        height: 10px;
+        width: 100%;
+        background: #000;
+        border-radius: 7px;
+        background: linear-gradient(to bottom, #facb7a, #f5b776);
+    }
+    
+    .part.two {
+        width: 96%;
+        background: linear-gradient(to bottom, #f5b776, #e98f6d);
+    }
+    
+    .part.three {
+        width: 92%;
+        background: linear-gradient(to bottom, #e98f6d, #e47b68);
+    }
+    
+    a {
+        position: absolute;
+        top: 0;
+        display: block;
+        text-decoration: none;
+        margin-top: 350px;
+    }
+    /* bokeh  */
+    
+    .top-left,
+    .top-right,
+    .bottom-left,
+    .bottom-right {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    .bokeh * {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #2f5c83;
+    }
+    
+    .top-left .sm {
+        top: 30px;
+        left: -20px;
+        transform: scale(.5);
+    }
+    
+    .top-left .big {
+        top: -15px;
+        left: 0px;
+        transform: scale(1.5);
+    }
+    
+    .top-left .usm {
+        top: -15px;
+        left: 20px;
+        transform: scale(.4);
+    }
+    
+    .top-left .mid {
+        top: -30px;
+        left: 20px;
+        transform: scale(.8);
+    }
+    
+    .top-right * {
+        background: #2f7177;
+    }
+    
+    .top-right .sm {
+        top: 40px;
+        left: 170px;
+        transform: scale(.5);
+    }
+    
+    .top-right .big {
+        top: 20px;
+        left: 170px;
+        transform: scale(1.6);
+    }
+    
+    .top-right .usm {
+        top: 45px;
+        left: 155px;
+        transform: scale(.4);
+    }
+    
+    .top-right .mid {
+        top: 0px;
+        left: 150px;
+        transform: scale(.8);
+    }
+    
+    .bottom-left * {
+        background: #2f6e76;
+        z-index: 99;
+    }
+    
+    .bottom-left .sm {
+        top: 155px;
+        left: 0px;
+        transform: scale(.5);
+    }
+    
+    .bottom-left .big {
+        top: 145px;
+        left: -15px;
+        transform: scale(1.4);
+    }
+    
+    .bottom-left .usm {
+        top: 135px;
+        left: -25px;
+        transform: scale(.4);
+    }
+    
+    .bottom-left .mid {
+        top: 120px;
+        left: 150px;
+        transform: scale(.8);
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="bird">
+            <div class="gradient-container">
+                <div class="gradient"></div>
+            </div>
+            <div class="bokeh">
+                <div class="top-left">
+                    <div class="sm"></div>
+                    <div class="usm"></div>
+                    <div class="mid"></div>
+                    <div class="big"></div>
+                </div>
+                <div class="top-right">
+                    <div class="sm"></div>
+                    <div class="usm"></div>
+                    <div class="mid"></div>
+                    <div class="big"></div>
+                </div>
+                <div class="bottom-left">
+                    <div class="sm"></div>
+                    <div class="usm"></div>
+                    <div class="mid"></div>
+                    <div class="big"></div>
+                </div>
+            </div>
+            <div class="wings">
+                <div class="part one"></div>
+                <div class="part two"></div>
+                <div class="part three"></div>
+            </div>
+            <div class="eyes">
+                <div class="eye">
+                    <div class="twinkle"></div>
+                </div>
+                <div class="eye">
+                    <div class="twinkle"></div>
+                </div>
+            </div>
+            <div class="nose"></div>
+        </div>
+    </div>
+    </div>
+    <a href="https://dribbble.com/shots/3216586-SQRX-iOS-game-icon">Inspired by Oleksii Khmelovskyi</a>
+</body>
+
+</html>
