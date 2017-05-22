@@ -1,0 +1,251 @@
+<html>
+<head>
+	<title>ArtCSSy | An exhibit of my personal creations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="gallery">
+        <div id="art1" class="art ">
+            <!-- OuterSpace  -->
+            <div class="container">
+                <style scoped>
+                .container {
+                    position: relative;
+                    display: flex;
+                    width: 300px;
+                    height: 300px;
+                    background: linear-gradient(to bottom, #501a96 10%, #f77899 80%, #fdceb7);
+                    perspective: 90px;
+                    border-radius: 50%;
+                    border: 15px solid #fff;
+                    overflow: hidden;
+                    box-shadow: 0 35px 40px rgba(249, 132, 130, 0.5), 0 15px 25px rgba(249, 132, 130, 0.8);
+                }
+                
+                .stars {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    z-index: -1;
+                }
+                
+                .star {
+                    position: absolute;
+                    width: 3px;
+                    height: 3px;
+                    background: radial-gradient(#fff, transparent 70%);
+                    top: 180px;
+                    left: 180px;
+                    border-radius: 50%;
+                }
+                
+                .sun {
+                    position: absolute;
+                    top: 10px;
+                    left: -30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: #f2eece;
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    transform: scale(1.2);
+                    z-index: 10;
+                }
+                
+                .ray1,
+                .ray2,
+                .ray3,
+                .ray4 {
+                    position: absolute;
+                    border-radius: 50%;
+                    background: #f2eece;
+                }
+                
+                .ray1 {
+                    width: 130px;
+                    height: 130px;
+                    opacity: .4;
+                    z-index: -1;
+                }
+                
+                .ray2 {
+                    width: 160px;
+                    height: 160px;
+                    z-index: -1;
+                    opacity: 0.4;
+                }
+                
+                .ray3 {
+                    width: 190px;
+                    height: 190px;
+                    z-index: -1;
+                    opacity: .2;
+                }
+                
+                .ray4 {
+                    width: 220px;
+                    height: 220px;
+                    z-index: -1;
+                    opacity: .1;
+                }
+                
+                .uranus,
+                .neptune,
+                .saturn {
+                    border-radius: 50%;
+                    position: absolute;
+                }
+                
+                .neptune {
+                    width: 40px;
+                    height: 40px;
+                    top: 30px;
+                    left: 140px;
+                    background: linear-gradient(145deg, #a4ea84 10%, #458da5, #3a2d3b 70%);
+                }
+                
+                .uranus {
+                    width: 70px;
+                    height: 70px;
+                    top: 110px;
+                    left: 190px;
+                    background: linear-gradient(145deg, #fff75e 10%, #fb4f4c, #321e6f 85%);
+                }
+                
+                .saturn {
+                    width: 100px;
+                    height: 100px;
+                    top: 145px;
+                    left: 50px;
+                    background: linear-gradient(170deg, #f79fa9 10%, #bf4997 30%, #531b96 60%);
+                    z-index: -1;
+                    transform: rotate(-20deg);
+                }
+                
+                .saturn.top {
+                    z-index: 1;
+                    clip: rect(0px, 100px, 50px, 0px);
+                }
+                
+                .ring {
+                    position: absolute;
+                    top: 185px;
+                    left: 30px;
+                    width: 135px;
+                    height: 20px;
+                    border-radius: 50%;
+                    border: 3px solid #fc9ca4;
+                    //border-image: linear-gradient(to right, #fff, #000);
+                    transform: rotate(160deg);
+                }
+                
+                .meteors {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 20;
+                }
+                
+                .m1,
+                .m2,
+                .m3,
+                .m4 {
+                    position: absolute;
+                    width: 200px;
+                    height: 10px;
+                    border-radius: 20%;
+                    background: radial-gradient(ellipse farthest-corner at 35px -10px, #fff 35%, rgba(0, 0, 0, 0) 60%);
+                    transform: rotate(210deg) scale(.5);
+                }
+                
+                .m1 {
+                    top: 20px;
+                    left: 90px;
+                }
+                
+                .m2 {
+                    top: 65px;
+                    left: 120px;
+                }
+                
+                .m3 {
+                    top: 135px;
+                    left: 40px;
+                }
+                
+                .m4 {
+                    top: 230px;
+                    left: 80px;
+                    animation-name: moves;
+                    animation-duration: 2s;
+                    animation-iteration-count: infinite;
+                    animation-delay: 2s;
+                }
+                
+                @-webkit-keyframes moves {
+                    0% {
+                        top: 100px;
+                        left: -150px;
+                    }
+                    100% {
+                        top: 350px;
+                        left: 300px;
+                    }
+                }
+                
+                @-webkit-keyframes twinkle {
+                    0% {
+                        -webkit-filter: brightness(100%);
+                    }
+                    100% {
+                        -webkit-filter: brightness(150%);
+                    }
+                }
+                </style>
+                <div class="stars"></div>
+                <div class="sun">
+                    <div class="ray1"></div>
+                    <div class="ray2"></div>
+                    <div class="ray3"></div>
+                    <div class="ray4"></div>
+                </div>
+                <div class="uranus"></div>
+                <div class="neptune"></div>
+                <div class="saturn top"></div>
+                <div class="saturn"></div>
+                <div class="ring"></div>
+                <div class="meteors">
+                    <div class="m1"></div>
+                    <div class="m2"></div>
+                    <div class="m3"></div>
+                    <div class="m4"></div>
+                </div>
+            </div>
+            <script>
+            const stars = document.querySelector("#art1 .stars");
+
+            for (var i = 20; i < 300; i += 25) {
+                for (var j = 20; j < 300; j += 25) {
+                    var star = document.createElement('div');
+                    star.classList.add('star');
+                    star.style.top = randomOffset(i);
+                    star.style.left = randomOffset(j);
+                    star.style.opacity = Math.random();
+                    if (Math.floor(Math.random() * 2)) {
+                        star.style.animation = "twinkle .5s linear infinite"
+                    }
+                    stars.appendChild(star);
+                }
+            }
+
+            function randomOffset(i) {
+                return i + Math.floor(Math.random() * 20) + "px";
+            }
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>
