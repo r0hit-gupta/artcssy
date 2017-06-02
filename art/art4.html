@@ -103,12 +103,46 @@ body {
   border-radius: 50%;
   z-index: 11;
 }
-.hour-hand {
+.hand {
   position: absolute;
-  right: 40;
-  width: 70px;
-  height: 15px;
-  border: 1px solid #000;
+  top: 35px;
+  display: flex;
+  align-items: center;
+}
+.border{
+  border-left   : 5px solid transparent;
+  border-right  : 5px solid transparent;
+  border-bottom : 65px solid var(--bdr-color);
+  padding: 1px;
+}
+
+.border::after{
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 1px;
+  border-left   : 5px solid transparent;
+  border-right  : 5px solid transparent;
+  border-bottom : 65px solid #fff;
+}
+
+.minute-hand {
+  transform: rotate(50deg);
+  transform-origin: bottom center;
+}
+
+.hour-hand {
+  top: 40px;
+  left: 90px;
+  transform: rotate(150deg);
+  transform-origin: bottom center;
+}
+.hour-hand .border {
+  border-bottom : 55px solid var(--bdr-color);
+}
+.hour-hand .border::after {
+  top: 14px;
+  border-bottom : 55px solid #fff;
 }
 
 .crown {
@@ -170,32 +204,38 @@ body {
   transform: scale(0.45) rotate(135deg);
 }
 
+
     </style>
 </head>
 
-<body>
-    <div class="container">
-        <div class="strap">
-            <div class="strap-bord"></div>
-        </div>
-        <div class="line"></div>
-        <div class="dial">
-            <div class="dial-inner">
-                <div class="top"></div>
-                <div class="right"></div>
-                <div class="bottom"></div>
-                <div class="left"></div>
-            </div>
-            <div class="white-patch"></div>
-            <div class="needle-origin"></div>
-            <div class="needle-origin-inner"></div>
-            <div class="hour-hand"></div>
-            <div class="crown"></div>
-        </div>
-        <div class="prop-1"></div>
-        <div class="prop-2"></div>
-        <div class="prop-3"></div>
+<body> 
+<div class="container">
+  <div class="strap">
+    <div class="strap-bord"></div>
+  </div>
+  <div class="line"></div>
+  <div class="dial">
+    <div class="dial-inner">
+      <div class="top"></div>
+      <div class="right"></div>
+      <div class="bottom"></div>
+      <div class="left"></div>
     </div>
+    <div class="white-patch"></div>
+    <div class="needle-origin"></div>
+    <div class="needle-origin-inner"></div>
+    <div class="minute-hand hand">
+      <div class="border"></div>
+    </div>
+    <div class="hour-hand hand">
+      <div class="border"></div>
+    </div>
+    <div class="crown"></div>
+  </div>
+  <div class="prop-1"></div>
+  <div class="prop-2"></div>
+  <div class="prop-3"></div>
+</div>
 </body>
 
 </html>
