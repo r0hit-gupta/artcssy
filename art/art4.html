@@ -74,8 +74,33 @@ body {
   background: #cfe6f4;
   border-radius: 50%;
   border: 2px solid var(--bdr-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
+.top, .bottom, .left, .right {
+  position: absolute;
+  width: 2px;
+  height: 25px;
+  background: #10567f;
+  border-radius: 10px;
+  z-index: 10;
+  box-shadow: 1px 0 rgba(0,0,0,.2);
+}
+.top {
+  top: 4px;
+}
+.bottom {
+  bottom: 4px;
+}
+.left {
+  left: 16px;
+  transform: rotate(90deg);
+}
+.right {
+  right: 16px;
+  transform: rotate(90deg);
+}
 .white-patch {
   position: absolute;
   width: 60px;
@@ -203,8 +228,6 @@ body {
   border-radius: 40%;
   transform: scale(0.45) rotate(135deg);
 }
-
-
     </style>
 </head>
 
@@ -217,9 +240,9 @@ body {
   <div class="dial">
     <div class="dial-inner">
       <div class="top"></div>
-      <div class="right"></div>
       <div class="bottom"></div>
       <div class="left"></div>
+      <div class="right"></div>
     </div>
     <div class="white-patch"></div>
     <div class="needle-origin"></div>
