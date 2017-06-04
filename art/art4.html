@@ -228,6 +228,31 @@ body {
   border-radius: 40%;
   transform: scale(0.45) rotate(135deg);
 }
+.prop-4::before, .prop-4::after  {
+  content: "~";
+  position: absolute;
+  font-size: 60px;
+  font-family: sans-serif;
+  color: #dec577;
+  transform: rotate(70deg);
+}
+.prop-4::before {
+  bottom: 150px;
+  left: 25px;
+}
+.prop-4::after {
+  bottom: 126px;
+  left: 37px;
+}
+a {
+        position: absolute;
+        bottom: 50px;
+        display: block;
+        text-decoration: none;
+        font-family: sans-serif;
+        font-weight: 100;
+        color: #555;
+    }
     </style>
 </head>
 
@@ -258,7 +283,9 @@ body {
   <div class="prop-1"></div>
   <div class="prop-2"></div>
   <div class="prop-3"></div>
+  <div class="prop-4"></div>
 </div>
+  <a href="https://dribbble.com/shots/3517045-Clock-Icon" target="_blank">inspired by Daniel</a>
 </body>
 
 </html>
